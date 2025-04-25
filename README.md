@@ -4,7 +4,6 @@ This repository contains example projects built using **Spring Boot** and **Java
 
 `Spring Boot` Examples to illustrate the `Spring-boot` concepts. This repository contains `Java-21` compliant examples.
 
-
 ---
 
 ## 🚀 Getting Started
