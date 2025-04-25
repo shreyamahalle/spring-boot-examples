@@ -53,6 +53,7 @@ cd employee-management-system
 2. Build & Run the App
    
 - From terminal:
+  
 ````
   mvn spring-boot:run
 ````
