@@ -18,7 +18,6 @@ To build and run the project:
 ```bash
 mvn clean install
 mvn spring-boot:run
-
 ```
 
 ## Author
