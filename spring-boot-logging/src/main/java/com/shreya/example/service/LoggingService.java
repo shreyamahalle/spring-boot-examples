@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoggingService {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoggingService.class);
+    private Logger logger = LoggerFactory.getLogger(LoggingService.class);
 
-    public String log() {
+    public String log(){
         logger.trace("A TRACE Message");
         logger.debug("A DEBUG Message");
         logger.info("An INFO Message");
