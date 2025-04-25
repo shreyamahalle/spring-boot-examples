@@ -22,7 +22,6 @@ mvn spring-boot:run
 ```
 
 ## Author
-
 Shreya Mahalle  
 [GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
 
