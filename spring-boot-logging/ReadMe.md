@@ -4,7 +4,7 @@ Follow the below instructions to have smooth execution of this application.
 ### Technical Details
 In this project, we are going to use below set of versions for demonstrations.
 
-    Spring Boot - 3.3.3
+    Spring Boot - 3.4.4
     Spring - 6.1.12
     Lombok - 1.18.24
 
