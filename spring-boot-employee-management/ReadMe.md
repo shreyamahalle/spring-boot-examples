@@ -1,4 +1,4 @@
-# 🧑‍💼 Employee Management System
+#🧑‍💼 Employee Management System
 
 A **Spring Boot** based full-stack web application designed to manage employee records efficiently using RESTful APIs. This project follows a layered architecture with clear separation of concerns between controller, service, repository, and model layers.
 
