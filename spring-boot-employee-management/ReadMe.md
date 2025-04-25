@@ -40,6 +40,7 @@ com.shreya.springboot ├── controller # REST APIs
 ├── repository # Data access
 ├── model # Entity class 
 └── SpringBootEmployeeApplication.java
+
 ````
 ## How to Run
 1. Clone the Repository
