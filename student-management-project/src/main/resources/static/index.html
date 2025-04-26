@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Student CRUD Application</h1>
+
+<!-- Form to add/update a student -->
+<div>
+    <h2>Add/Update Student</h2>
+    <form id="studentForm">
+        <input type="hidden" id="studentId" />
+        <label for="name">Name:</label>
+        <input type="text" id="name" required /><br/><br/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required /><br/><br/>
+        <label for="course">Course:</label>
+        <input type="text" id="course" required /><br/><br/>
+        <button type="submit">Save Student</button>
+    </form>
+</div>
+
+<br/>
+<!-- Table to display all students -->
+<div>
+    <h2>All Students</h2>
+    <table id="studentsTable" border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function() {
+        // Function to get all students
+        function getAllStudents() {
+            $.get("/api/students", function(data) {
+                let studentsTable = $('#studentsTable tbody');
+                studentsTable.empty();
+                data.forEach(student => {
+                    studentsTable.append(`
+                        <tr>
+                            <td>${student.id}</td>
+                            <td>${student.name}</td>
+                            <td>${student.email}</td>
+                            <td>${student.course}</td>
+                            <td>
+                                <button class="editBtn" data-id="${student.id}">Edit</button>
+                                <button class="deleteBtn" data-id="${student.id}">Delete</button>
+                            </td>
+                        </tr>
+                    `);
+                });
+            });
+        }
+
+        // Call getAllStudents initially to load the table
+        getAllStudents();
+
+        // Add/Update student form submission
+        $('#studentForm').submit(function(e) {
+            e.preventDefault();
+            const id = $('#studentId').val();
+            const studentData = {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                course: $('#course').val()
+            };
+
+            let method = 'POST';
+            let url = '/api/students';
+            if (id) {
+                method = 'PUT';
+                url = '/api/students/' + id;
+            }
+
+            $.ajax({
+                url: url,
+                type: method,
+                data: JSON.stringify(studentData),
+                contentType: 'application/json',
+                success: function() {
+                    // Clear form and reload students
+                    $('#studentForm')[0].reset();
+                    $('#studentId').val('');
+                    getAllStudents();
+                }
+            });
+        });
+
+        // Edit student
+        $(document).on('click', '.editBtn', function() {
+            const id = $(this).data('id');
+            $.get('/api/students/' + id, function(student) {
+                $('#studentId').val(student.id);
+                $('#name').val(student.name);
+                $('#email').val(student.email);
+                $('#course').val(student.course);
+            });
+        });
+
+        // Delete student
+        $(document).on('click', '.deleteBtn', function() {
+            const id = $(this).data('id');
+            $.ajax({
+                url: '/api/students/' + id,
+                type: 'DELETE',
+                success: function() {
+                    getAllStudents();
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
