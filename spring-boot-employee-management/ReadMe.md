@@ -1,4 +1,4 @@
-# 🧑‍💼 Employee Management System
+#🧑‍💼 Employee Management System
 
 A **Spring Boot** based full-stack web application designed to manage employee records efficiently using RESTful APIs. This project follows a layered architecture with clear separation of concerns between controller, service, repository, and model layers.
 
@@ -40,15 +40,20 @@ com.shreya.springboot ├── controller # REST APIs
 ├── repository # Data access
 ├── model # Entity class 
 └── SpringBootEmployeeApplication.java
+
 ````
 ## How to Run
+
 1. Clone the Repository
 ````
 git clone https://github.com/your-username/employee-management-system.git
 cd employee-management-system
 ````
+
 2. Build & Run the App
+   
 - From terminal:
+  
 ````
   mvn spring-boot:run
 ````
