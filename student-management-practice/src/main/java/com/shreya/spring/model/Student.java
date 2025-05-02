@@ -1,7 +1,10 @@
 package com.shreya.spring.model;
 
-public record Student(int id,
-                      String name,
-                      double percentage) {
+import lombok.Data;
 
+@Data
+public class Student {
+    public int id;
+    public String name;
+    public double percentage;
 }
