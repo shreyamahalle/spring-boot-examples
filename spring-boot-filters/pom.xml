@@ -13,27 +13,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-filters</name>
 	<description>Demo project for Spring Boot</description>
-	<licenses>
-		<license>
-			<name>MIT License</name>
-			<url>http://www.opensource.org/licenses/mit-license.php</url>
-		</license>
-	</licenses>
-
-	<developers>
-
-		<developer>
-			<name>Shreya</name>
-			<email>shreyamahalle2@gmail.com</email>
-			<id>shreyamahalle</id>
-			<url>https://shreyamahalle.github.io</url>
-
-			<roles>
-				<role>Developer</role>
-			</roles>
-
-		</developer>
-	</developers>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
@@ -41,6 +20,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+<!--			exclusions tomcat-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--        undertow added-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 
 		<dependency>
@@ -94,5 +85,21 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
-
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Shreya</name>
+			<email>shreyamahalle2@gmail.com</email>
+			<id>shreyamahalle</id>
+			<url>https://shreyamahalle.github.io</url>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
 </project>
