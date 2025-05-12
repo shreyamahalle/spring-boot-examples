@@ -1,4 +1,8 @@
 package com.shreya.spring.exceptions;
 
-public class TrainingNotfoundToDeleteException {
+import java.io.Serial;
+
+public class TrainingNotfoundToDeleteException extends RuntimeException {
+    @Serial
+    private static final long serialVersionUID = 1L;
 }
