@@ -4,7 +4,7 @@ import com.shreya.spring.domain.Training;
 
 import java.util.List;
 
-public interface EntiryRepository {
+public interface EntryRepository {
 
     boolean store(Training t);
 
