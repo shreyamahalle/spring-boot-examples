@@ -1,4 +1,29 @@
 package com.shreya.spring.config;
+import com.shreya.spring.interceptor.TrainingServiceInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-public class TrainingServiceInterceptorAppConfig {
+@Component
+public class TrainingServiceInterceptorAppConfig implements WebMvcConfigurer {
+    @Autowired
+    TrainingServiceInterceptor trainingServiceInterceptor;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(trainingServiceInterceptor);
+    }
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/training").allowedOrigins("http://localhost:8080");
+            }
+        };
+    }
 }

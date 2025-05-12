@@ -13,4 +13,9 @@ public class Training {
     private int duration;
     private String prerequisite;
 
+    public Training(String name, int duration, String prerequisite) {
+        this.name = name;
+        this.duration = duration;
+        this.prerequisite = prerequisite;
+    }
 }

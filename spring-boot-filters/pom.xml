@@ -22,7 +22,7 @@
 		<spring-cloud.version>2024.0.1</spring-cloud.version>
 		<lombok.version>1.18.30</lombok.version>
 		<junit-jupiter.version>5.10.2</junit-jupiter.version>
-		<mockito.version>5.11.0</mockito.version>
+		<mockito.version>4.11.0</mockito.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
