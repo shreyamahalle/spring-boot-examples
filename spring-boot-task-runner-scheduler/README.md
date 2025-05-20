@@ -40,3 +40,8 @@ src/
 │    │    └── application.properties
 ├── pom.xml
 ````
+
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+
