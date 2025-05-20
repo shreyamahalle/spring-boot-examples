@@ -13,6 +13,7 @@ public class ApplicationRunnerDemoApplication implements ApplicationRunner {
 	private Logger log = LoggerFactory.getLogger(ApplicationRunnerDemoApplication.class);
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ApplicationRunnerDemoApplication.class, args);
 	}
 
