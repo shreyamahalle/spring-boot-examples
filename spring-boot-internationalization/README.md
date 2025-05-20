@@ -18,3 +18,8 @@
 ***
 Thank you for checking out this example. :)
 ***
+
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+

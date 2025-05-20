@@ -57,3 +57,8 @@ cd employee-management-system
 ````
   mvn spring-boot:run
 ````
+
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+

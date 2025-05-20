@@ -55,3 +55,8 @@ Enter data and submit, verify logs.
     curl -X DELETE -H 'Content-Type: application/json' http://localhost:8080/training/0
 
 Above-mentioned are just operations. This program is just a demonstration of the interceptor. Please verify logs everytime you trigger any operation.
+
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+

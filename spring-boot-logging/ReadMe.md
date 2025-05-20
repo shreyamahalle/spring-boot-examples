@@ -163,3 +163,10 @@ Starter Packs:
 ***
 Thank you for checking out. :)
 ***
+
+Shreya Mahalle 
+
+[GitHub](https://github.com/shreyamahalle) | [LinkedIn](https://linkedin.com/in/shreyamahalle)
+
+
+
