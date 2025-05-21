@@ -13,14 +13,14 @@ public class ApplicationRunnerDemoApplication implements ApplicationRunner {
 	private Logger log = LoggerFactory.getLogger(ApplicationRunnerDemoApplication.class);
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(ApplicationRunnerDemoApplication.class, args);
 	}
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		log.info("Total non-option arguments {}",args.getNonOptionArgs());
-
-
+		args.getNonOptionArgs().forEach(log::info);
+		log.info("Total option arguments {}",args.getOptionNames().size());
+		args.getOptionNames().forEach(log::info);
 	}
 }
