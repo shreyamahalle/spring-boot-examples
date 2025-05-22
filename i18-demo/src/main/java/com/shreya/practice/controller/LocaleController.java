@@ -1,12 +1,12 @@
 package com.shreya.practice.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+@Controller
 public class LocaleController {
 
-    @GetMapping("/locale")
+    @RequestMapping("/locale")
     public String locale(){
         return "locale";
     }
