@@ -50,9 +50,6 @@ public class StudentRepository {
         if (newStudent.percentage() != studentToBeUpdated.getPercentage() && newStudent.percentage() > 0) {
             studentToBeUpdated.setPercentage(newStudent.percentage());
         }
-//        else {
-//            studentToBeUpdated.setPercentage(studentToBeUpdated.getPercentage());
-//        }
         return data.get(id);
     }
 

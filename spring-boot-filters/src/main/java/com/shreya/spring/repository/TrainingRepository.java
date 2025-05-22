@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class TrainingRepository implements EntiryRepository {
+public class TrainingRepository implements EntryRepository {
     private static final Logger logger = LoggerFactory.getLogger(TrainingRepository.class);
     private final List<Training> trainingList = new ArrayList<Training>();
     private int index = -1;
