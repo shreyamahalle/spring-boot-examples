@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>i18 example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="i18.js"></script>
+</head>
+<body>
+
+<h1 th:text="#{welcome.message}">Welcome</h1>
+<br/><br/>
+
+<label th:text="#{change.language}">Change Language</label>
+<select id="locales">
+    <option value="">--Select--</option>
+    <option value="en" th:text="#{language.english}">English</option>
+    <option value="hi" th:text="#{language.hindi}">Hindi</option>
+</select>
+
+</body>
+</html>
