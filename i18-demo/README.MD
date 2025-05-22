@@ -109,7 +109,7 @@ $(document).ready(function () {
 
 ## How to Run
 ````
-git clone https://github.com/i18-demo/i18n-demo.git
+git clone https://github.com/shreyamahalle/spring-boot-examples.git
 cd i18n-demo
 ````
 ## Build and run:
