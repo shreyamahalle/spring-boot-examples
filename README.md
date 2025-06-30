@@ -1,5 +1,6 @@
 # 📚 Spring Boot Examples
 
+
 This repository contains example projects built using **Spring Boot** and **Java 21** to demonstrate core Spring Boot concepts for learning and reference.
 
 `Spring Boot` Examples to illustrate the `Spring-boot` concepts. This repository contains `Java-21` compliant examples.
